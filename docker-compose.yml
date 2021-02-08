@@ -1,0 +1,9 @@
+version: "2"
+services:
+  telebot:
+    container_name: ps5-bot-telegram
+    build: .
+    environment:
+      - TELEGRAM_BOT_TOKEN=
+    volumes:
+      - "./logs:/usr/src/app/logs"
