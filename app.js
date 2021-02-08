@@ -4,7 +4,7 @@ const { log } = require("./utils");
 const tg = new Telegram(process.env.TELEGRAM_BOT_TOKEN);
 
 async function notify(msg) {
-  await tg.sendMessage("-1001124742241", msg);
+  await tg.sendMessage(process.env.CHANNEL_ID, msg);
 }
 
 async function notifyOnAvailable() {
